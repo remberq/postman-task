@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "0aa6d85f-e123-4d9c-8a64-6b69a626ec20",
+		"name": "KataTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"username\": \"remberq\",\r\n        \"email\": \"remberq@gmail.com\",\r\n        \"password\": \"qwerty\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.realworld.io/api/users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"email\": \"remberq@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.realworld.io/api/users/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get current user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlbWJlcnFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJyZW1iZXJxIiwiaWF0IjoxNjU0ODcyNzIxLCJleHAiOjE2NjAwNTY3MjF9.aN5bite4UALpC-eeFTWRDrw1HItx87b6Aq4s68BInLk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlbWJlcnFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJyZW1iZXJxIiwiaWF0IjoxNjU0ODcyNzIxLCJleHAiOjE2NjAwNTY3MjF9.aN5bite4UALpC-eeFTWRDrw1HItx87b6Aq4s68BInLk\"",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.realworld.io/api/user",
+					"protocol": "https",
+					"host": [
+						"api",
+						"realworld",
+						"io"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
